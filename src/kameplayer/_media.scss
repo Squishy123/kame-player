@@ -1,0 +1,45 @@
+//breakpoint variables
+//small tablets and large smartphones (landscape)
+$screen-sm-min: 576px;
+//small tablets (portrait)
+$screen-md-min: 768px;
+//tablets and small desktops
+$screen-lg-min: 922px;
+//large tablets and desktops
+$screen-xl-min: 1200px;
+//mixins for breakpoints
+@mixin sm {
+    @media (min-width: ($screen-sm-min)) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media(min-width: ($screen-md-min)) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media(min-width: ($screen-lg-min)) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media(min-width: ($screen-xl-min)) {
+        @content;
+    }
+}
+
+@mixin above($screen) {
+    @media(min-width: ($screen)) {
+        @content;
+    }
+}
+
+@mixin below($screen) {
+    @media(max-width: ($screen)) {
+        @content;
+    }
+}

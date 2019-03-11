@@ -11,6 +11,7 @@
     "react-dom": "^16.8.4"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "7.1.4",
     "babel-preset-env": "^1.7.0",
@@ -18,6 +19,7 @@
     "css-loader": "^2.1.1",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.11.0",
+    "postcss-loader": "^3.0.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "sass-loader": "^7.1.0",
@@ -27,6 +29,12 @@
     "webpack-dev-server": "^3.2.1"
   },
   "scripts": {
-    "start": "webpack-dev-server --mode development"
+    "start": "webpack-dev-server --mode development",
+    "transpile": "babel src -d dist --copy-files",
+    "prepublishOnly": "yarn run transpile"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.4.10",
+    "mini-css-extract-plugin": "^0.5.0"
   }
 }

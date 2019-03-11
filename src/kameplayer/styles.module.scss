@@ -1,0 +1,18 @@
+@import './media';
+
+.videoContainer {
+    max-width: 100%;
+    height: auto;
+}
+
+.video {
+    @include lg {
+        max-width: 100%;
+        height: auto;
+    }
+
+    @include below($screen-lg-min) {
+        width: 100vw;
+        height: auto;
+    }
+}
