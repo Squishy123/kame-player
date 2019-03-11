@@ -10,7 +10,7 @@ export default class KamePlayer extends React.Component {
             progress: 0,
             mute: false,
             volume: 0,
-            fullscreen: false
+            fullscreen: false 
         }
     }
 
@@ -27,10 +27,17 @@ export default class KamePlayer extends React.Component {
                         <a href={this.props.download}>Download</a> 
                         : null
                     }
+
+           
                 </video>
                 <div className={styles.videoControls}>
-
+                    {(this.state.stopped) ? 
+                    <button className={`${styles.videoControl} ${styles.videoPlay}`}>Play</button> 
+                    :
+                    <button className={`${styles.videoControl} ${styles.videoPause}`}>Pause</button>
+                    }
                 </div>
+                
             </div>
         )
     }
