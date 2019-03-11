@@ -4,6 +4,14 @@ import styles from './styles.module.scss';
 export default class KamePlayer extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            stopped: true,
+            progress: 0,
+            mute: false,
+            volume: 0,
+            fullscreen: false
+        }
     }
 
     render() {
@@ -20,6 +28,9 @@ export default class KamePlayer extends React.Component {
                         : null
                     }
                 </video>
+                <div className={styles.videoControls}>
+
+                </div>
             </div>
         )
     }
